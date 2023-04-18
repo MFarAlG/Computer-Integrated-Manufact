@@ -1,0 +1,25 @@
+import bpy
+
+# Define the size of the box
+width = 2.0
+height = 2.0
+depth = 2.0
+
+# Create the box
+bpy.ops.mesh.primitive_cube_add(size=1)
+box = bpy.context.active_object
+
+# Resize the box
+box.scale = (width, depth, height)
+
+# Create the lid
+lid_height = 0.2
+bpy.ops.mesh.primitive_cube_add(size=1)
+lid = bpy.context.active_object
+
+# Resize the lid
+lid.scale = (width + 0.1, depth + 0.1, lid_height)
+
+# Move the lid above the box
+lid_location = (0, 0, 1)
+lid.location = lid_location

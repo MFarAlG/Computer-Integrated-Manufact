@@ -1,0 +1,62 @@
+import bpy
+
+#box 1
+# Create the box
+bpy.ops.mesh.primitive_cube_add(size=1)
+box1 = bpy.context.active_object
+
+# Resize the box
+box1.scale = (1, 1, 1)
+# Box location
+box1_location = (3, 0, 0)
+box1.location = box1_location
+
+# Create the lid
+bpy.ops.mesh.primitive_cube_add(size=1)
+lid1 = bpy.context.active_object
+
+# Resize the lid
+lid1.scale = (1.1, 1.1, 0.2)
+
+# Move the lid above the box
+lid1_location = (3, 0, 0.5)
+lid1.location = lid1_location
+
+#box2
+bpy.ops.mesh.primitive_cube_add(size=1)
+box2 = bpy.context.active_object
+
+# Resize the box
+box2.scale = (2, 2, 2)
+
+# Create the lid
+bpy.ops.mesh.primitive_cube_add(size=1)
+lid2 = bpy.context.active_object
+
+# Resize the lid
+lid2.scale = (2.1, 2.1, 0.2)
+
+# Move the lid above the box
+lid2_location = (0, 0, 1)
+lid2.location = lid2_location
+
+#box3
+bpy.ops.mesh.primitive_cube_add(size=1)
+box3 = bpy.context.active_object
+
+# Resize the box
+box3.scale = (3, 3, 3)
+# Box location
+box3_location = (-4, 0, 0)
+box3.location = box3_location
+
+# Create the lid
+bpy.ops.mesh.primitive_cube_add(size=1)
+lid3 = bpy.context.active_object
+
+# Resize the lid
+lid3.scale = (3.1, 3.1, 0.2)
+
+# Move the lid above the box
+lid3_location = (-4, 0, 1.5)
+lid3.location = lid3_location
